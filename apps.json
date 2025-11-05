@@ -1,1 +1,23 @@
 
+[
+  {
+    "name": "Assam PMIS App",
+    "version_code": 1,
+    "version_name": "1.0",
+    "fileId": "1R1FdM9l0DLa8S-ZfsumwW7UJY1lPdBj1",
+    "updatedAt": "25-Oct-2025",
+    "downloadUrl": "https://dumydev.github.io/assampmis_apk/",
+    "releaseNotes": "1st release",
+    "upgradeForcefully": false
+  },
+  {
+    "name": "Field Survey App",
+    "version_code": 3,
+    "version_name": "2.1",
+    "fileId": "1abcXYZ987654321",
+    "updatedAt": "28-Oct-2025",
+    "downloadUrl": "https://example.com/field-survey/",
+    "releaseNotes": "Added offline sync feature",
+    "upgradeForcefully": false
+  }
+]
