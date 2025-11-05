@@ -1,1 +1,151 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>App Downloads</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+    .app-list {
+      max-width: 450px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-height: 550px; /* 🔹 enables scrolling */
+      overflow-y: auto;
+      padding-right: 10px;
+    }
+    .app-card {
+      background: white;
+      padding: 25px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .app-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+    .app-card h2 {
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: #007bff;
+    }
+    .app-card p {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .download-btn {
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      pointer-events: none;
+      opacity: 0.6;
+    }
+    .download-btn.active {
+      pointer-events: auto;
+      opacity: 1;
+    }
+    .download-btn:hover {
+      background-color: #0056b3;
+    }
+    #error {
+      color: red;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Available Apps</h1>
+
+  <div class="app-list" id="appContainer">
+    <p>Loading apps...</p>
+  </div>
+
+  <p id="error"></p>
+
+  <script>
+    // Fetch apps list
+    fetch('apps.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not OK');
+        }
+        return response.json();
+      })
+      .then(apps => {
+        const container = document.getElementById('appContainer');
+        container.innerHTML = ''; // clear loading text
+
+        if (!Array.isArray(apps) || apps.length === 0) {
+          container.innerHTML = '<p>No apps available.</p>';
+          return;
+        }
+
+        apps.forEach(app => {
+          const card = document.createElement('div');
+          card.className = 'app-card';
+
+          // app name
+          const title = document.createElement('h2');
+          title.textContent = app.name || 'Unnamed App';
+          card.appendChild(title);
+
+          // version info
+          const version = document.createElement('p');
+          version.textContent = `Version: ${app.version_name}`;
+          card.appendChild(version);
+
+          // updated date
+          const updated = document.createElement('p');
+          updated.textContent = `Updated at: ${app.updatedAt}`;
+          card.appendChild(updated);
+
+          // release notes
+          if (app.releaseNotes) {
+            const notes = document.createElement('p');
+            notes.textContent = `Notes: ${app.releaseNotes}`;
+            card.appendChild(notes);
+          }
+
+          // download button
+          const dlBtn = document.createElement('a');
+          dlBtn.className = 'download-btn active';
+          dlBtn.textContent = `Download v${app.version_name}`;
+          dlBtn.href = app.fileId
+            ? `https://drive.google.com/uc?export=download&id=${app.fileId}`
+            : app.downloadUrl;
+          dlBtn.target = '_blank';
+          card.appendChild(dlBtn);
+
+          container.appendChild(card);
+        });
+      })
+      .catch(error => {
+        console.error('Error loading apps:', error);
+        document.getElementById('error').textContent = 'Failed to load app data.';
+      });
+  </script>
+</body>
+</html>
