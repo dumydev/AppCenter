@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Forest Department - App Downloads</title>
+<title>App Center</title>
 <style>
   body {
     font-family: 'Segoe UI', Arial, sans-serif;
@@ -25,9 +25,10 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    overflow-y: auto;
-    padding-right: 5px;
-    max-height: 80vh;
+    /* Scroll removed */
+    overflow-y: visible;
+    max-height: none;
+    padding-right: 0;
   }
   .app-card {
     background: #fdfcf7;
@@ -74,13 +75,6 @@
     background-color: #1b5e20;
     transform: scale(1.05);
   }
-  .app-list::-webkit-scrollbar {
-    width: 8px;
-  }
-  .app-list::-webkit-scrollbar-thumb {
-    background-color: #81c784;
-    border-radius: 4px;
-  }
   #error { color: #b71c1c; margin-top: 20px; }
 </style>
 </head>
@@ -102,7 +96,6 @@
         return;
       }
 
-      // Build all app cards at once
       container.innerHTML = apps.map(app => `
         <div class="app-card">
           <h2>${app.name || 'Unnamed App'}</h2>
