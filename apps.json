@@ -30,5 +30,15 @@
     "downloadUrl": "https://dumydev.github.io/AppCenter/",
     "releaseNotes": "1st release",
     "upgradeForcefully": false
-  }
+  },
+   {
+        "name": "FRA App",
+        "version_code": 1,
+        "version_name": "1.0",
+        "fileId": "1dJmf5j-kcGTHAvI04ZIpkTgvyILxibaj",
+        "updatedAt": "02-Mar-2026",
+        "downloadUrl": "https://dumydev.github.io/AppCenter/",
+        "releaseNotes": "1st release",
+        "upgradeForcefully": false
+    }
 ]
