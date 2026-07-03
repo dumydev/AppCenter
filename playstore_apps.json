@@ -1,16 +1,22 @@
-
-
 [
-  {
-  "name": "Assam FMIS App",
-  "version_code": 2,
-  "version_name": "1.0.2",
-  "appId": "com.rmsi.assamfmis",
-  "updatedAt": "02-July-2026",
-  "downloadUrl": "https://play.google.com/store/apps/details?id=com.rmsi.assamfmis",
-  "releaseNotes": "2nd release",
-  "upgradeForcefully": false
-}
-
-  
+    {
+        "name": "Assam FMIS App",
+        "version_code": 2,
+        "version_name": "1.0.2",
+        "appId": "com.rmsi.assamfmis",
+        "updatedAt": "02-July-2026",
+        "downloadUrl": "https://play.google.com/store/apps/details?id=com.rmsi.assamfmis",
+        "releaseNotes": "2nd release",
+        "upgradeForcefully": false
+    },
+    {
+        "name": "Assam PMIS App",
+        "version_code": 1,
+        "version_name": "1.0.1",
+        "appId": "com.rmsi.assampmis",
+        "updatedAt": "03-July-2026",
+        "downloadUrl": "https://play.google.com/store/apps/details?id=com.rmsi.assampmis",
+        "releaseNotes": "1st release",
+        "upgradeForcefully": false
+    }
 ]
