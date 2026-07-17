@@ -18,5 +18,15 @@
         "downloadUrl": "https://play.google.com/store/apps/details?id=com.rmsi.assampmis",
         "releaseNotes": "1st release",
         "upgradeForcefully": false
-    }
+    },
+    {
+    "name": "Assam Patrolling App",
+    "version_code": 1,
+    "version_name": "1.0.0",
+    "appId": "com.afd.patrollapp",
+    "updatedAt": "17-July-2026",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.afd.patrollapp",
+    "releaseNotes": "1st release",
+    "upgradeForcefully": false
+}
 ]
