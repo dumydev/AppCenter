@@ -22,13 +22,13 @@
   },
 
   {
-    "name": "Patrolling App",
+    "name": "Patrolling App (Pre-Prod)",
     "version_code": 1,
     "version_name": "1.0",
-    "fileId": "11bKXBRRHV24E1GB2QWD3ftuwIIzPfpUk",
-    "updatedAt": "13-Nov-2025",
+    "fileId": "1Oxj7z_FsmlSbrDHGtauJgzwVHeZvpGY2",
+    "updatedAt": "16-Nav-2026",
     "downloadUrl": "https://dumydev.github.io/AppCenter/",
-    "releaseNotes": "1st release",
+    "releaseNotes": "2nd release",
     "upgradeForcefully": false
   },
    {
