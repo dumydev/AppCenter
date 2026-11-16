@@ -11,13 +11,13 @@
   "upgradeForcefully": false
 },
   {
-    "name": "Assam PMIS App",
+    "name": "Assam PMIS App (Pre-Prod)",
     "version_code": 1,
     "version_name": "1.1",
-    "fileId": "1y8vtUjUeQdNnXHxPo7h9xwEkMjK_wmbH",
-    "updatedAt": "02-Mar-2026",
+    "fileId": "1NmcZumtE2TkWFF9nzDzFGLTI9IEf_s2G",
+    "updatedAt": "16-Nav-2026",
     "downloadUrl": "https://dumydev.github.io/AppCenter/",
-    "releaseNotes": "2nd release.",
+    "releaseNotes": "3rd release.",
     "upgradeForcefully": false
   },
 
